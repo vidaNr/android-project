@@ -4,16 +4,18 @@
     android:layout_height="match_parent">
     <ImageView
 
-        android:layout_height="100dp"
-        android:layout_width="100dp"
+        android:layout_height="300dp"
+        android:layout_width="300dp"
         android:layout_centerInParent="true"
-        android:src="@drawable/logo"
+        android:src="@drawable/pinlogo"
         />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:paddingTop="150dp"
+        android:paddingTop="220dp"
         android:text="Pinterest"
-        android:textSize="22sp" />
+        android:textSize="26sp"
+        android:textColor="@color/text_title"
+        android:fontFamily="@font/roboto_medium"/>
 </RelativeLayout>

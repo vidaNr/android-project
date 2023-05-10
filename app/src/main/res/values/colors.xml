@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="secVar">#FF8C8E8D</color>
-    <color name="baseVar">#FFefefef</color>
+    <color name="baseVar">#FFEFEFEF</color>
     <color name="onSec">#FFe7e9e8</color>
     <color name="sec">#FF0e0e10</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="logo_color">#C01F25</color>
+
+    <color name="text_color1">#FFEFEFEF</color>
+    <color name="text_color2">#FF8C8E8D</color>
+    <color name="text_title">#ff000000</color>
+
+
 </resources>

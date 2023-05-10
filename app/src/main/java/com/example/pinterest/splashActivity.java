@@ -29,7 +29,7 @@ public class splashActivity extends Activity {
             }
         };
 
-        handler.postDelayed(runnable, 1500);
+        handler.postDelayed(runnable, 1000);
 
     }
 }
