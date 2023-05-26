@@ -82,13 +82,14 @@
                     android:textColor="@color/secVar"
                     android:textColorHint="@color/text_color2"
                     android:textSize="20sp" />
+
                 <ImageView
                     android:id="@+id/iv_show_pass"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
-                    android:src="@drawable/ic_eye_on"
                     android:layout_gravity="end|center_vertical"
                     android:layout_marginEnd="12dp"
+                    android:src="@drawable/ic_eye_off"
                     app:tint="@color/secVar" />
 
             </FrameLayout>

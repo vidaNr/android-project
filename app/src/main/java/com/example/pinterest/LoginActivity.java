@@ -28,7 +28,7 @@ public class LoginActivity extends Activity {
             @Override
             public void onClick(View view) {
 
-                ivShowPass.setImageResource(!ShowPass ? R.drawable.ic_eye_on : R.drawable.ic_eye_off);
+                ivShowPass.setImageResource(ShowPass ? R.drawable.ic_eye_off : R.drawable.ic_eye_on);
                 etShowPass.setInputType(ShowPass ? InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD : InputType.TYPE_CLASS_TEXT);
 
                 ShowPass = !ShowPass;
