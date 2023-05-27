@@ -7,14 +7,26 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
+
+import java.util.List;
+
 public class ImageAdapter extends RecyclerView.Adapter<ImageViewHolder> {
+
+    private List<Image> imageList;
+
+    public ImageAdapter(List<Image> imageList) {
+        this.imageList = imageList;
+    }
+
+
     @NonNull
     @Override
     public ImageViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
-        View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_image,parent,false);
+        View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_image, parent, false);
 
-        ImageViewHolder viewHolder = new ImageViewHolder(itemView) ;
+        ImageViewHolder viewHolder = new ImageViewHolder(itemView);
 
 
         return viewHolder;
@@ -22,11 +34,17 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull ImageViewHolder holder, int position) {
-    holder.ivImage.setImageResource(R.drawable.);
+
+
+
+        Glide.with(holder.itemView.getContext())
+                .load(imageList.get(position).getImage())
+                .into(holder.ivImage);
+
     }
 
     @Override
     public int getItemCount() {
-        return 10;
+        return imageList.size();
     }
 }

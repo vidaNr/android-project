@@ -2,6 +2,7 @@ package com.example.pinterest;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.InputType;
 import android.util.Log;
@@ -37,16 +38,20 @@ public class LoginActivity extends Activity {
 
 
         Button btnSignIn = findViewById(R.id.btn_sign_in);
-        btnSignIn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Log.d("aaaa", "ljcds");
-                startActivity( new Intent(LoginActivity.this , MainActivity.class));
-                finish();
-            }
+        btnSignIn.setOnClickListener(view -> {
+
+
+            SharedPreferences pref = getSharedPreferences("pinterest", MODE_PRIVATE);
+            SharedPreferences.Editor editor = pref.edit();
+            editor.putBoolean("is_login", true);
+            editor.apply();
+
+            startActivity(new Intent(LoginActivity.this, MainActivity.class));
+            finish();
         });
-
-
     }
 
+
 }
+
+

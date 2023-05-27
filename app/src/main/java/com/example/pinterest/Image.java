@@ -1,19 +1,23 @@
 package com.example.pinterest;
 
 public class Image {
-
     private long id;
-
     private String title;
-
-
     private String categories;
-
     private int width;
-
     private int height;
 
     private String image;
+
+
+    public Image(long id, String title, String categories, int width, int height, String image) {
+        this.id = id;
+        this.title = title;
+        this.categories = categories;
+        this.width = width;
+        this.height = height;
+        this.image = image;
+    }
 
 
     public long getId() {
@@ -63,11 +67,6 @@ public class Image {
     public void setImage(String image) {
         this.image = image;
     }
-
-
-
-
-
 
 
 }
