@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 
@@ -27,18 +28,40 @@ public class LoginActivity extends Activity {
 
         ivShowPass.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
+            public void onClick(View v) {
 
                 ivShowPass.setImageResource(ShowPass ? R.drawable.ic_eye_off : R.drawable.ic_eye_on);
                 etShowPass.setInputType(ShowPass ? InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD : InputType.TYPE_CLASS_TEXT);
 
                 ShowPass = !ShowPass;
+
             }
         });
 
 
         Button btnSignIn = findViewById(R.id.btn_sign_in);
         btnSignIn.setOnClickListener(view -> {
+
+            EditText etEmail= findViewById(R.id.et_email);
+            EditText etPass= findViewById(R.id.et_show_pass);
+
+
+            if((etEmail.getText().toString().isEmpty())){
+                Toast.makeText(this, "Email is required!", Toast.LENGTH_SHORT).show();
+                return;
+            }
+
+            if((etPass.getText().toString().isEmpty())){
+                Toast.makeText(this, "Password is required!", Toast.LENGTH_SHORT).show();
+                return;
+            }
+
+
+            goMain();
+
+        });
+    }
+        private void goMain(){
 
 
             SharedPreferences pref = getSharedPreferences("pinterest", MODE_PRIVATE);
@@ -48,9 +71,8 @@ public class LoginActivity extends Activity {
 
             startActivity(new Intent(LoginActivity.this, MainActivity.class));
             finish();
-        });
-    }
 
+        }
 
 }
 
