@@ -36,6 +36,7 @@
                 android:text="welcome to"
                 android:textSize="25sp" />
 
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -48,13 +49,13 @@
 
 
             <com.google.android.material.textfield.TextInputLayout
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="16dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:hint="Email Address"
-                app:errorEnabled="true"
-                app:helperText="is required!">
+                android:layout_margin="16dp"
+                app:helperText="Is required* "
+                app:helperTextTextColor="@color/logo_color">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/et_email"
@@ -62,56 +63,42 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/roboto_medium"
                     android:inputType="textEmailAddress"
-                    android:padding="12dp"
-                    android:textColorHighlight="@color/logo_color"
-                    android:textColorHint="@color/text_color2"
-                    android:textSize="20sp"
-                    app:helperTextTextColor="@color/logo_color"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    />
+                    android:padding="14dp"
+                    android:textSize="18sp" />
+
             </com.google.android.material.textfield.TextInputLayout>
 
 
-            <com.google.android.material.textfield.TextInputLayout
+
+
+            <FrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="16dp">
 
-
-                <FrameLayout
+                <EditText
+                    android:id="@+id/et_show_pass"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="15dp"
-                    android:layout_marginTop="15dp"
-                    android:layout_marginEnd="31dp"
-                    android:layout_marginBottom="15dp">
+                    android:fontFamily="@font/roboto_medium"
+                    android:hint="Password"
+                    android:inputType="textPassword"
+                    android:padding="12dp"
+                    android:textColor="@color/secVar"
+                    android:textColorHint="@color/text_color2"
+                    android:textSize="20sp" />
 
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/et_show_pass"
-                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/border_edittext"
-                        android:fontFamily="@font/roboto_medium"
-                        android:hint="Password"
-
-                        android:inputType="textPassword"
-                        android:padding="12dp"
-                        android:textColor="@color/secVar"
-                        android:textColorHint="@color/text_color2"
-                        android:textSize="20sp" />
-
-                    <ImageView
-                        android:id="@+id/iv_show_pass"
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:layout_gravity="end|center_vertical"
-                        android:layout_marginEnd="12dp"
-                        android:src="@drawable/ic_eye_off"
-                        app:tint="@color/secVar" />
-                </FrameLayout>
-            </com.google.android.material.textfield.TextInputLayout>
+                <ImageView
+                    android:id="@+id/iv_show_pass"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="end|center_vertical"
+                    android:layout_marginEnd="12dp"
+                    android:src="@drawable/ic_eye_off"
+                    app:tint="@color/secVar" />
+            </FrameLayout>
 
         </LinearLayout>
     </ScrollView>

@@ -47,7 +47,7 @@ public class LoginActivity extends Activity {
 
 
             if((etEmail.getText().toString().isEmpty())){
-                //Toast.makeText(this, "Email is required!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Email is required!", Toast.LENGTH_SHORT).show();
 
                 return;
             }
