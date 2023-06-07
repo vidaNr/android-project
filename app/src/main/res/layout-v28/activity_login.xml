@@ -61,7 +61,6 @@
                     android:id="@+id/iet_email"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/roboto_medium"
                     android:inputType="textEmailAddress"
                     android:padding="14dp"
                     android:textSize="18sp" />
@@ -76,6 +75,8 @@
                 android:layout_marginEnd="16dp"
                 android:hint="Password"
                 app:endIconMode="password_toggle"
+                app:counterEnabled="true"
+                app:counterMaxLength="8"
                 app:helperText="Is required*"
                 app:helperTextTextColor="@color/logo_color">
 
@@ -84,8 +85,7 @@
                     android:id="@+id/iet_show_pass"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="textPassword"
-                    />
+                    android:inputType="textPassword" />
 
 
             </com.google.android.material.textfield.TextInputLayout>

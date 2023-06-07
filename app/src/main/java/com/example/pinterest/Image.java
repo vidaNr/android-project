@@ -1,5 +1,7 @@
 package com.example.pinterest;
 
+import com.google.gson.annotations.SerializedName;
+
 public class Image {
     private long id;
     private String title;
@@ -7,6 +9,7 @@ public class Image {
     private int width;
     private int height;
 
+    @SerializedName("urls")
     private String image;
 
 
