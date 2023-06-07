@@ -15,10 +15,9 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageViewHolder> {
 
     private List<Image> imageList;
 
-    public ImageAdapter(List<Image> imageList) {
+    public ImageAdapter(List<GetImagesResponse> photos) {
         this.imageList = imageList;
     }
-
 
     @NonNull
     @Override
@@ -34,7 +33,6 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull ImageViewHolder holder, int position) {
-
 
 
         Glide.with(holder.itemView.getContext())

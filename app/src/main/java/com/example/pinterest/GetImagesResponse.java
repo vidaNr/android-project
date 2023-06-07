@@ -1,8 +1,12 @@
 package com.example.pinterest;
 
+import com.google.gson.annotations.SerializedName;
+
 import java.util.List;
 
 public class GetImagesResponse {
+
+    @SerializedName("urls")
     private List<Image> image;
 
     public List<Image> getImage() {

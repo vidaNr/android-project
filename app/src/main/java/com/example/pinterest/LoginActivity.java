@@ -4,11 +4,8 @@ import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.util.Log;
 import android.widget.Button;
 import android.widget.Toast;
-
-import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import androidx.annotation.Nullable;
@@ -41,30 +38,26 @@ public class LoginActivity extends Activity {
         btnSignIn.setOnClickListener(view -> {
 
 
-            validation(email, pass);
+            if (ietEmail.getText().toString().isEmpty()) {
+                ietEmail.requestFocus();
+                ietEmail.setError("It's Empty");
+                return;
+            } else if (!email.matches("[a-zA-Z0-9._-]+@[a-z]+\\\\.+[a-z]+")) {
+                ietEmail.requestFocus();
+                ietEmail.setError("It's not Valid");
+
+            } else if (pass.length() < 8) {
+                ietPass.requestFocus();
+                ietPass.setError("Must be longer");
+
+            } else {
+                return;
+            }
+
             goMain();
 
 
         });
-    }
-
-    private void validation(String email, String pass) {
-
-        if (email.length()==0){
-            ietEmail.requestFocus();
-            ietEmail.setError("It's Empty");
-        }
-        else if (!email.matches("[a-zA-Z0-9._-]+@[a-z]+\\\\.+[a-z]+")) {
-            ietEmail.requestFocus();
-            ietEmail.setError("It's not Valid");
-
-        } else if (pass.length() < 8) {
-            ietPass.requestFocus();
-            ietPass.setError("Must be longer");
-
-        } else {
-            return;
-        }
     }
 
 
