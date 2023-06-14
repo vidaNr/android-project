@@ -11,8 +11,8 @@ import retrofit2.http.Query;
 
 public class UnsplashApiClient {
 
-    private static final String BASE_URL = "https://api.unsplash.com/";
-    static final String ACCESS_KEY = "xLMvQGeU-fEdbFwrVySOOsrl_Vbxjq2W6hD5P88WeXI";
+    private static final String BASE_URL = "https://api.unsplash.com";
+    private static final String ACCESS_KEY = "xLMvQGeU-fEdbFwrVySOOsrl_Vbxjq2W6hD5P88WeXI";
 
     private static UnsplashApiService apiService;
 
