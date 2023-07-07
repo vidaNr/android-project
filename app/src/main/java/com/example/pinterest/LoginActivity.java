@@ -4,7 +4,10 @@ import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.os.Handler;
+import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.regex.Matcher;
@@ -21,7 +24,10 @@ public class LoginActivity extends Activity {
     private TextInputEditText ietPass;
     Pattern pattern;
 
+    private TextView tvRegister;
+
     @Override
+
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
@@ -43,7 +49,7 @@ public class LoginActivity extends Activity {
                 ietEmail.setError("it's Not Valid!");
                 return;
             }
-            if (ietPass.getText().toString().length()<8){
+            if (ietPass.getText().toString().length() < 8) {
                 ietPass.requestFocus();
                 ietPass.setError("Must be longer than 8 charecter");
                 return;
@@ -51,6 +57,30 @@ public class LoginActivity extends Activity {
             goMain();
 
         });
+
+        tvRegister = findViewById(R.id.tv_register);
+        tvRegister.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                goRegister();
+            }
+        });
+
+    }
+
+
+    private void goRegister() {
+
+        Handler handler = new Handler();
+        Runnable runnable = new Runnable() {
+            @Override
+            public void run() {
+                startActivity(new Intent(LoginActivity.this, RegisterActivity.class));
+                finish();
+            }
+        };
+        handler.postDelayed(runnable, 1000);
+
     }
 
     private boolean validation(String email) {
@@ -64,8 +94,6 @@ public class LoginActivity extends Activity {
         } else {
             return false;
         }
-
-
     }
 
     private void goMain() {
@@ -79,7 +107,6 @@ public class LoginActivity extends Activity {
         finish();
 
     }
-
 }
 
 

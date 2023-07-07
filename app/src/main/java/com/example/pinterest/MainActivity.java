@@ -50,8 +50,7 @@ public class MainActivity extends Activity {
     }
 
     private void callApi() {
-
-        Constant.getMyApi().getImage(API_KEY,30,1).enqueue(new Callback<List<Image>>() {
+        Constant.getMyApi().getImage(API_KEY, 30, 1).enqueue(new Callback<List<Image>>() {
             @Override
             public void onResponse(Call<List<Image>> call, Response<List<Image>> response) {
                 if ((response.body() != null)) {
@@ -61,7 +60,6 @@ public class MainActivity extends Activity {
                     Log.d("AAA", "loading");
                 }
             }
-
             @Override
             public void onFailure(Call<List<Image>> call, Throwable t) {
                 Log.d("AAA", "Failed");

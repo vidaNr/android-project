@@ -1,0 +1,506 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ll_footer"
+        android:layout_alignParentTop="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="22dp"
+                android:layout_marginEnd="32dp"
+                android:text="Pick yor country"
+                android:textColor="@color/black"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="11dp"
+                android:layout_marginEnd="32dp"
+                android:text="This helps us find you more relevant content. We won't show it on your profile."
+                android:fontFamily="@font/roboto_medium"
+                android:textFontWeight="1"
+                android:justificationMode="inter_word"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="19dp"
+                android:layout_marginEnd="32dp"
+                android:text="Country"
+                android:textColor="@color/secVar"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="29dp"
+                android:fontFamily="@font/roboto_medium"
+                android:hint="United States"
+                android:inputType="textEmailAddress"
+                android:padding="12dp"
+                android:textColorHint="@color/secVar"
+                android:textSize="19sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="22dp"
+                android:layout_marginEnd="32dp"
+                android:text="Pick 5 or more topics"
+                android:textColor="@color/black"
+                android:textSize="26sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="1dp"
+                android:layout_marginEnd="1dp"
+                android:orientation="horizontal"
+                android:padding="2dp">
+
+                <LinearLayout
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="7dp"
+                    android:orientation="vertical"
+                    android:padding="1dp">
+
+                    <com.makeramen.roundedimageview.RoundedImageView
+                        android:id="@+id/iv_cover1"
+                        android:layout_width="130dp"
+                        android:layout_height="130dp"
+                        android:layout_marginStart="1dp"
+                        android:layout_marginTop="1dp"
+                        android:src="@drawable/drawings"
+                        app:riv_corner_radius="10dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginTop="-30dp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:padding="2dp"
+                        android:text="Drawings"
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="7dp"
+                    android:orientation="vertical"
+                    android:padding="1dp">
+
+                    <com.makeramen.roundedimageview.RoundedImageView
+                        android:id="@+id/iv_cover2"
+                        android:layout_width="130dp"
+                        android:layout_height="130dp"
+                        android:layout_marginStart="1dp"
+                        android:layout_marginTop="1dp"
+                        android:src="@drawable/memes2"
+                        android:scaleType="centerCrop"
+                        app:riv_corner_radius="10dp"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginTop="-30dp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:padding="2dp"
+                        android:text="Memes"
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="7dp"
+                    android:orientation="vertical"
+                    android:padding="1dp">
+
+                    <com.makeramen.roundedimageview.RoundedImageView
+                        android:id="@+id/iv_cover3"
+                        android:layout_width="130dp"
+                        android:layout_height="130dp"
+                        android:layout_marginStart="1dp"
+                        android:layout_marginTop="1dp"
+                        android:src="@drawable/interiordesign"
+                        app:riv_corner_radius="10dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginTop="-30dp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:padding="2dp"
+                        android:text="Interior Design"
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="1dp"
+                android:layout_marginEnd="1dp"
+                android:orientation="horizontal"
+                android:padding="2dp">
+
+                <LinearLayout
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="7dp"
+                    android:orientation="vertical"
+                    android:padding="1dp">
+
+                    <com.makeramen.roundedimageview.RoundedImageView
+                        android:id="@+id/iv_cover4"
+                        android:layout_width="130dp"
+                        android:layout_height="130dp"
+                        android:layout_marginStart="1dp"
+                        android:layout_marginTop="1dp"
+                        android:src="@drawable/anime"
+                        app:riv_corner_radius="10dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginTop="-30dp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:padding="2dp"
+                        android:text="Anime"
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="7dp"
+                    android:orientation="vertical"
+                    android:padding="1dp">
+
+                    <com.makeramen.roundedimageview.RoundedImageView
+                        android:id="@+id/iv_cover5"
+                        android:layout_width="130dp"
+                        android:layout_height="130dp"
+                        android:layout_marginStart="1dp"
+                        android:layout_marginTop="1dp"
+                        android:src="@drawable/photography"
+                        app:riv_corner_radius="10dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginTop="-30dp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:padding="2dp"
+                        android:text="Photography"
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="7dp"
+                    android:orientation="vertical"
+                    android:padding="1dp">
+
+                    <com.makeramen.roundedimageview.RoundedImageView
+                        android:id="@+id/iv_cover6"
+                        android:layout_width="130dp"
+                        android:layout_height="130dp"
+                        android:layout_marginStart="1dp"
+                        android:layout_marginTop="1dp"
+                        android:src="@drawable/design2"
+                        android:scaleType="centerCrop"
+                        app:riv_corner_radius="10dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginTop="-30dp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:padding="2dp"
+                        android:text="Design"
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="1dp"
+                android:layout_marginEnd="1dp"
+                android:orientation="horizontal"
+                android:padding="2dp">
+
+                <LinearLayout
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="7dp"
+                    android:orientation="vertical"
+                    android:padding="1dp">
+
+                    <com.makeramen.roundedimageview.RoundedImageView
+                        android:id="@+id/iv_cover7"
+                        android:layout_width="130dp"
+                        android:layout_height="130dp"
+                        android:layout_marginStart="1dp"
+                        android:layout_marginTop="1dp"
+                        android:src="@drawable/art"
+                        app:riv_corner_radius="10dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginTop="-30dp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:padding="2dp"
+                        android:text="Art"
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="7dp"
+                    android:orientation="vertical"
+                    android:padding="1dp">
+
+                    <com.makeramen.roundedimageview.RoundedImageView
+                        android:id="@+id/iv_cover8"
+                        android:layout_width="130dp"
+                        android:layout_height="130dp"
+                        android:layout_marginStart="1dp"
+                        android:layout_marginTop="1dp"
+                        android:src="@drawable/astronomy"
+                        app:riv_corner_radius="10dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginTop="-30dp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:padding="2dp"
+                        android:text="astronomy"
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="7dp"
+                    android:orientation="vertical"
+                    android:padding="1dp">
+
+                    <com.makeramen.roundedimageview.RoundedImageView
+                        android:id="@+id/iv_cover9"
+                        android:layout_width="130dp"
+                        android:layout_height="130dp"
+                        android:layout_marginStart="1dp"
+                        android:layout_marginTop="1dp"
+                        android:src="@drawable/animals"
+                        app:riv_corner_radius="10dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginTop="-30dp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:padding="2dp"
+                        android:text="Animals"
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="1dp"
+                android:layout_marginEnd="1dp"
+                android:orientation="horizontal"
+                android:padding="2dp">
+
+                <LinearLayout
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="7dp"
+                    android:orientation="vertical"
+                    android:padding="1dp">
+
+                    <com.makeramen.roundedimageview.RoundedImageView
+                        android:id="@+id/iv_cover10"
+                        android:layout_width="130dp"
+                        android:layout_height="130dp"
+                        android:layout_marginStart="1dp"
+                        android:layout_marginTop="1dp"
+                        android:src="@drawable/drink"
+                        app:riv_corner_radius="10dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginTop="-30dp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:padding="2dp"
+                        android:text="Drink"
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="7dp"
+                    android:orientation="vertical"
+                    android:padding="1dp">
+
+                    <com.makeramen.roundedimageview.RoundedImageView
+                        android:id="@+id/iv_cover11"
+                        android:layout_width="130dp"
+                        android:layout_height="130dp"
+                        android:layout_marginStart="1dp"
+                        android:layout_marginTop="1dp"
+                        android:src="@drawable/birthdays2"
+                        android:scaleType="centerCrop"
+                        app:riv_corner_radius="10dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginTop="-30dp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:padding="2dp"
+                        android:text="Birthdays"
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="7dp"
+                    android:orientation="vertical"
+                    android:padding="1dp">
+
+                    <com.makeramen.roundedimageview.RoundedImageView
+                        android:id="@+id/iv_cover12"
+                        android:layout_width="130dp"
+                        android:layout_height="130dp"
+                        android:layout_marginStart="1dp"
+                        android:layout_marginTop="1dp"
+                        android:src="@drawable/planting"
+                        app:riv_corner_radius="10dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginTop="-30dp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:padding="2dp"
+                        android:text="Planting"
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/ll_footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btn_next"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:background="@drawable/rounded_button"
+            android:backgroundTint="@color/logo_color"
+            android:fontFamily="@font/roboto_medium"
+            android:paddingTop="20dp"
+
+
+            android:paddingBottom="20dp"
+            android:text="next"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

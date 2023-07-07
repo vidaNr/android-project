@@ -25,12 +25,6 @@ public class Image {
     }
 
 
-
-
-
-
-
-
     private String id;
     private String title;
     private String categories;

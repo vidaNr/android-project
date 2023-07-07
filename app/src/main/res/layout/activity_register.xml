@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ll_footer"
+        android:layout_alignParentTop="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+
+            <ImageView
+
+                android:layout_width="wrap_content"
+                android:layout_height="310dp"
+                android:layout_gravity="center_horizontal|top"
+                android:scaleType="centerCrop"
+                android:src="@drawable/pic" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="-25dp"
+                android:layout_marginEnd="32dp"
+                android:text="Register Now"
+                android:textColor="@color/black"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="6dp"
+                android:orientation="horizontal"
+                android:padding="2dp">
+
+                <LinearLayout
+                    android:layout_width="185dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical"
+                    android:padding="2dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="2dp"
+                        android:layout_marginTop="1dp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="First name"
+                        android:textColor="@color/black"
+                        android:textSize="22sp" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:background="@drawable/border_edittext"
+                        android:fontFamily="@font/roboto_medium"
+                        android:hint="first name"
+                        android:inputType="text"
+                        android:padding="12dp"
+                        android:textColorHint="@color/secVar"
+                        android:textSize="19sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="185dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical"
+                    android:padding="2dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="2dp"
+                        android:layout_marginTop="1dp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="Last name"
+                        android:textColor="@color/black"
+                        android:textSize="22sp" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:background="@drawable/border_edittext"
+                        android:fontFamily="@font/roboto_medium"
+                        android:hint="last name"
+                        android:inputType="text"
+                        android:padding="12dp"
+                        android:textColorHint="@color/secVar"
+                        android:textSize="19sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/roboto_medium"
+                android:text="Email address"
+                android:textColor="@color/black"
+                android:textSize="22sp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/border_edittext"
+                android:fontFamily="@font/roboto_medium"
+                android:hint="demopinterest@gmail.com"
+                android:inputType="textEmailAddress"
+                android:padding="12dp"
+                android:textColorHint="@color/secVar"
+                android:textSize="19sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="6dp"
+                android:orientation="horizontal"
+                android:padding="2dp">
+
+                <LinearLayout
+                    android:layout_width="185dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical"
+                    android:padding="2dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="2dp"
+                        android:layout_marginTop="1dp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="Your age"
+                        android:textColor="@color/black"
+                        android:textSize="22sp" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:background="@drawable/border_edittext"
+                        android:fontFamily="@font/roboto_medium"
+                        android:hint="20"
+                        android:inputType="number"
+                        android:padding="12dp"
+                        android:textColorHint="@color/secVar"
+                        android:textSize="19sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="185dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical"
+                    android:padding="2dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="2dp"
+                        android:layout_marginTop="1dp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="Your gender"
+                        android:textColor="@color/black"
+                        android:textSize="22sp" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:background="@drawable/border_edittext"
+                        android:fontFamily="@font/roboto_medium"
+                        android:hint="male"
+                        android:padding="12dp"
+                        android:textColorHint="@color/secVar"
+                        android:textSize="19sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/roboto_medium"
+                android:text="Password"
+                android:textColor="@color/black"
+                android:textSize="22sp" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp">
+
+                <EditText
+                    android:id="@+id/et_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/border_edittext"
+                    android:fontFamily="@font/roboto_medium"
+                    android:hint="password"
+                    android:inputType="textPassword"
+                    android:maxLength="12"
+                    android:padding="12dp"
+                    android:textColorHint="@color/secVar"
+                    android:textSize="19sp" />
+
+                <ImageView
+                    android:id="@+id/iv_show_password"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="end|center_vertical"
+                    android:layout_marginEnd="30dp"
+                    android:src="@drawable/ic_eye_on"
+                    app:tint="@color/secVar" />
+            </FrameLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/roboto_medium"
+                android:text="Re-enter password"
+                android:textColor="@color/black"
+                android:textSize="22sp" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp">
+
+                <EditText
+                    android:id="@+id/et_re_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/border_edittext"
+                    android:fontFamily="@font/roboto_medium"
+                    android:hint="password"
+                    android:inputType="textPassword"
+                    android:maxLength="12"
+                    android:padding="12dp"
+                    android:textColorHint="@color/secVar"
+                    android:textSize="19sp" />
+
+                <ImageView
+                    android:id="@+id/iv_show_re_password"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="end|center_vertical"
+                    android:layout_marginEnd="30dp"
+                    android:src="@drawable/ic_eye_on"
+                    app:tint="@color/secVar" />
+            </FrameLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/ll_footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="1dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:fontFamily="@font/roboto_medium"
+                android:text="Already have an account?"
+                android:textColor="@color/secVar"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:fontFamily="@font/roboto_medium"
+                android:text="sign in"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_register"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:background="@drawable/rounded_button"
+            android:backgroundTint="@color/logo_color"
+            android:fontFamily="@font/roboto_medium"
+            android:paddingTop="20dp"
+
+            android:paddingBottom="20dp"
+            android:text="Register Now"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</RelativeLayout>
