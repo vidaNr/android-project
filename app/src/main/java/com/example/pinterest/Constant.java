@@ -10,7 +10,6 @@ public class Constant {
 
     public static MyApi getMyApi() {
         if (retrofit == null) {
-
             retrofit = new Retrofit.Builder().baseUrl(BASE_URL)
                     .addConverterFactory(GsonConverterFactory.create())
                     .build();

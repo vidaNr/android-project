@@ -3,15 +3,24 @@ package com.example.pinterest;
 import static com.example.pinterest.Constant.API_KEY;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
 
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
 import com.example.pinterest.Model.Image;
+import com.google.android.material.bottomnavigation.BottomNavigationItemView;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.navigation.NavigationBarView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,10 +35,10 @@ public class MainActivity extends Activity {
 
     private RecyclerView rvImages;
     private ImageAdapter imageAdapter;
-    private ArrayList<Image> list;
+    private ArrayList<Image> list = new ArrayList<>();
     private StaggeredGridLayoutManager manager;
-    private int page = 1;
-
+    private int imagePage = 1;
+    private int pageSize = 30;
     private MyApi myApi;
 
 
@@ -37,37 +46,53 @@ public class MainActivity extends Activity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        init();
+        fetchImage();
 
-        rvImages = findViewById(R.id.rv_images);
-        list = new ArrayList<>();
-        imageAdapter = new ImageAdapter(this, list);
-        manager = new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL);
-        rvImages.setLayoutManager(manager);
-        rvImages.setHasFixedSize(true);
-        rvImages.setAdapter(imageAdapter);
 
-        callApi();
     }
 
-    private void callApi() {
-        Constant.getMyApi().getImage(API_KEY, 30, 1).enqueue(new Callback<List<Image>>() {
+    private void fetchImage() {
+        Constant.getMyApi().getImage(API_KEY, 30, imagePage).enqueue(new Callback<List<Image>>() {
             @Override
             public void onResponse(Call<List<Image>> call, Response<List<Image>> response) {
                 if ((response.body() != null)) {
-
-                    list.addAll(response.body());
-                    imageAdapter.notifyDataSetChanged();
-                    Log.d("AAA", "loading");
+                    if (imageAdapter == null) {
+                        list.addAll(response.body());
+                        imageAdapter = new ImageAdapter(MainActivity.this, list) {
+                            @Override
+                            public void onLastPage() {
+                                imagePage++;
+                                fetchImage();
+                            }
+                        };
+                        rvImages.setAdapter(imageAdapter);
+                    } else {
+                        imageAdapter.notifyDataSetChanged();
+                    }
                 }
+
             }
+
             @Override
             public void onFailure(Call<List<Image>> call, Throwable t) {
-                Log.d("AAA", "Failed");
+
             }
         });
 
+    }
+
+    private void init() {
+
+        rvImages = findViewById(R.id.rv_images);
+        manager = new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL);
+        rvImages.setLayoutManager(manager);
+        rvImages.setHasFixedSize(true);
+
+
 
     }
+
 }
 
 
