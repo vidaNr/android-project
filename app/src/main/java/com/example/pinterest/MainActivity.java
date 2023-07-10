@@ -35,7 +35,7 @@ public class MainActivity extends Activity {
 
     private RecyclerView rvImages;
     private ImageAdapter imageAdapter;
-    private ArrayList<Image> list = new ArrayList<>();
+    private ArrayList<Image> list;
     private StaggeredGridLayoutManager manager;
     private int imagePage = 1;
     private int pageSize = 30;
@@ -46,9 +46,9 @@ public class MainActivity extends Activity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         init();
         fetchImage();
-
 
     }
 
@@ -57,19 +57,9 @@ public class MainActivity extends Activity {
             @Override
             public void onResponse(Call<List<Image>> call, Response<List<Image>> response) {
                 if ((response.body() != null)) {
-                    if (imageAdapter == null) {
-                        list.addAll(response.body());
-                        imageAdapter = new ImageAdapter(MainActivity.this, list) {
-                            @Override
-                            public void onLastPage() {
-                                imagePage++;
-                                fetchImage();
-                            }
-                        };
-                        rvImages.setAdapter(imageAdapter);
-                    } else {
-                        imageAdapter.notifyDataSetChanged();
-                    }
+
+                    list.addAll(response.body());
+                    imageAdapter.notifyDataSetChanged();
                 }
 
             }
@@ -79,16 +69,17 @@ public class MainActivity extends Activity {
 
             }
         });
-
     }
 
     private void init() {
 
         rvImages = findViewById(R.id.rv_images);
+        list = new ArrayList<>();
+        imageAdapter = new ImageAdapter(this, list);
         manager = new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL);
         rvImages.setLayoutManager(manager);
         rvImages.setHasFixedSize(true);
-
+        rvImages.setAdapter(imageAdapter);
 
 
     }
