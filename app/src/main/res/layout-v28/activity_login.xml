@@ -55,7 +55,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
                 android:hint="Email Address"
-                app:helperText="Is required* "
+                app:helperText="Is required*"
                 app:helperTextTextColor="@color/logo_color">
 
                 <com.google.android.material.textfield.TextInputEditText

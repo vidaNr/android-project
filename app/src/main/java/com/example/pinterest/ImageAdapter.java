@@ -15,7 +15,7 @@ import com.example.pinterest.Model.Image;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ImageAdapter extends RecyclerView.Adapter<ImageViewHolder> {
+public abstract class ImageAdapter extends RecyclerView.Adapter<ImageViewHolder> {
 
     private Context context;
     private ArrayList<Image> list;
@@ -28,7 +28,6 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageViewHolder> {
     @NonNull
     @Override
     public ImageViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-
         View itemView = LayoutInflater.from(context).inflate(R.layout.item_image, parent, false);
         ImageViewHolder viewHolder = new ImageViewHolder(itemView);
         return viewHolder;
@@ -41,7 +40,14 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageViewHolder> {
                 .load(list.get(position).getUrls().getRegular())
                 .into(holder.ivImage);
 
+        Log.d("aaa","position " + position);
+        if (position == getItemCount() - 1) {
+            onEndOfPage();
+            Log.d("aaa", "end of page");
+        }
     }
+
+    public abstract void onEndOfPage();
 
     @Override
     public int getItemCount() {

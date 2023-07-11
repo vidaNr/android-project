@@ -16,6 +16,8 @@ public class FavoritesActivity extends Activity {
         setContentView(R.layout.activity_favorites);
 
         Button btnNext = findViewById(R.id.btn_next);
+
+
         btnNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -24,4 +26,7 @@ public class FavoritesActivity extends Activity {
             }
         });
     }
+
+
+
 }

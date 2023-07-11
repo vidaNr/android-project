@@ -86,8 +86,8 @@
                 android:padding="2dp">
 
                 <LinearLayout
-                    android:layout_width="130dp"
-                    android:layout_height="130dp"
+                    android:layout_width="125dp"
+                    android:layout_height="125dp"
                     android:layout_centerInParent="true"
                     android:layout_marginTop="7dp"
                     android:orientation="vertical"
@@ -95,11 +95,12 @@
 
                     <com.makeramen.roundedimageview.RoundedImageView
                         android:id="@+id/iv_cover1"
-                        android:layout_width="130dp"
-                        android:layout_height="130dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
                         android:layout_marginStart="1dp"
                         android:layout_marginTop="1dp"
                         android:src="@drawable/drawings"
+                        android:scaleType="centerCrop"
                         app:riv_corner_radius="10dp" />
 
                     <TextView
@@ -115,8 +116,8 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_width="130dp"
-                    android:layout_height="130dp"
+                    android:layout_width="125dp"
+                    android:layout_height="125dp"
                     android:layout_centerInParent="true"
                     android:layout_marginTop="7dp"
                     android:orientation="vertical"
@@ -124,8 +125,8 @@
 
                     <com.makeramen.roundedimageview.RoundedImageView
                         android:id="@+id/iv_cover2"
-                        android:layout_width="130dp"
-                        android:layout_height="130dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
                         android:layout_marginStart="1dp"
                         android:layout_marginTop="1dp"
                         android:src="@drawable/memes2"
@@ -146,8 +147,8 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_width="130dp"
-                    android:layout_height="130dp"
+                    android:layout_width="125dp"
+                    android:layout_height="125dp"
                     android:layout_centerInParent="true"
                     android:layout_marginTop="7dp"
                     android:orientation="vertical"
@@ -155,8 +156,8 @@
 
                     <com.makeramen.roundedimageview.RoundedImageView
                         android:id="@+id/iv_cover3"
-                        android:layout_width="130dp"
-                        android:layout_height="130dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
                         android:layout_marginStart="1dp"
                         android:layout_marginTop="1dp"
                         android:src="@drawable/interiordesign"
@@ -186,8 +187,8 @@
                 android:padding="2dp">
 
                 <LinearLayout
-                    android:layout_width="130dp"
-                    android:layout_height="130dp"
+                    android:layout_width="125dp"
+                    android:layout_height="125dp"
                     android:layout_centerInParent="true"
                     android:layout_marginTop="7dp"
                     android:orientation="vertical"
@@ -195,8 +196,8 @@
 
                     <com.makeramen.roundedimageview.RoundedImageView
                         android:id="@+id/iv_cover4"
-                        android:layout_width="130dp"
-                        android:layout_height="130dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
                         android:layout_marginStart="1dp"
                         android:layout_marginTop="1dp"
                         android:src="@drawable/anime"
@@ -215,8 +216,8 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_width="130dp"
-                    android:layout_height="130dp"
+                    android:layout_width="125dp"
+                    android:layout_height="125dp"
                     android:layout_centerInParent="true"
                     android:layout_marginTop="7dp"
                     android:orientation="vertical"
@@ -224,8 +225,8 @@
 
                     <com.makeramen.roundedimageview.RoundedImageView
                         android:id="@+id/iv_cover5"
-                        android:layout_width="130dp"
-                        android:layout_height="130dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
                         android:layout_marginStart="1dp"
                         android:layout_marginTop="1dp"
                         android:src="@drawable/photography"
@@ -244,8 +245,8 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_width="130dp"
-                    android:layout_height="130dp"
+                    android:layout_width="125dp"
+                    android:layout_height="125dp"
                     android:layout_centerInParent="true"
                     android:layout_marginTop="7dp"
                     android:orientation="vertical"
@@ -253,8 +254,8 @@
 
                     <com.makeramen.roundedimageview.RoundedImageView
                         android:id="@+id/iv_cover6"
-                        android:layout_width="130dp"
-                        android:layout_height="130dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
                         android:layout_marginStart="1dp"
                         android:layout_marginTop="1dp"
                         android:src="@drawable/design2"
@@ -285,8 +286,8 @@
                 android:padding="2dp">
 
                 <LinearLayout
-                    android:layout_width="130dp"
-                    android:layout_height="130dp"
+                    android:layout_width="125dp"
+                    android:layout_height="125dp"
                     android:layout_centerInParent="true"
                     android:layout_marginTop="7dp"
                     android:orientation="vertical"
@@ -294,8 +295,8 @@
 
                     <com.makeramen.roundedimageview.RoundedImageView
                         android:id="@+id/iv_cover7"
-                        android:layout_width="130dp"
-                        android:layout_height="130dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
                         android:layout_marginStart="1dp"
                         android:layout_marginTop="1dp"
                         android:src="@drawable/art"
@@ -314,8 +315,8 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_width="130dp"
-                    android:layout_height="130dp"
+                    android:layout_width="125dp"
+                    android:layout_height="125dp"
                     android:layout_centerInParent="true"
                     android:layout_marginTop="7dp"
                     android:orientation="vertical"
@@ -323,8 +324,8 @@
 
                     <com.makeramen.roundedimageview.RoundedImageView
                         android:id="@+id/iv_cover8"
-                        android:layout_width="130dp"
-                        android:layout_height="130dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
                         android:layout_marginStart="1dp"
                         android:layout_marginTop="1dp"
                         android:src="@drawable/astronomy"
@@ -343,8 +344,8 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_width="130dp"
-                    android:layout_height="130dp"
+                    android:layout_width="125dp"
+                    android:layout_height="125dp"
                     android:layout_centerInParent="true"
                     android:layout_marginTop="7dp"
                     android:orientation="vertical"
@@ -352,8 +353,8 @@
 
                     <com.makeramen.roundedimageview.RoundedImageView
                         android:id="@+id/iv_cover9"
-                        android:layout_width="130dp"
-                        android:layout_height="130dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
                         android:layout_marginStart="1dp"
                         android:layout_marginTop="1dp"
                         android:src="@drawable/animals"
@@ -383,8 +384,8 @@
                 android:padding="2dp">
 
                 <LinearLayout
-                    android:layout_width="130dp"
-                    android:layout_height="130dp"
+                    android:layout_width="125dp"
+                    android:layout_height="125dp"
                     android:layout_centerInParent="true"
                     android:layout_marginTop="7dp"
                     android:orientation="vertical"
@@ -392,8 +393,8 @@
 
                     <com.makeramen.roundedimageview.RoundedImageView
                         android:id="@+id/iv_cover10"
-                        android:layout_width="130dp"
-                        android:layout_height="130dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
                         android:layout_marginStart="1dp"
                         android:layout_marginTop="1dp"
                         android:src="@drawable/drink"
@@ -412,8 +413,8 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_width="130dp"
-                    android:layout_height="130dp"
+                    android:layout_width="125dp"
+                    android:layout_height="125dp"
                     android:layout_centerInParent="true"
                     android:layout_marginTop="7dp"
                     android:orientation="vertical"
@@ -421,8 +422,8 @@
 
                     <com.makeramen.roundedimageview.RoundedImageView
                         android:id="@+id/iv_cover11"
-                        android:layout_width="130dp"
-                        android:layout_height="130dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
                         android:layout_marginStart="1dp"
                         android:layout_marginTop="1dp"
                         android:src="@drawable/birthdays2"
@@ -442,8 +443,8 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_width="130dp"
-                    android:layout_height="130dp"
+                    android:layout_width="125dp"
+                    android:layout_height="125dp"
                     android:layout_centerInParent="true"
                     android:layout_marginTop="7dp"
                     android:orientation="vertical"
@@ -451,8 +452,8 @@
 
                     <com.makeramen.roundedimageview.RoundedImageView
                         android:id="@+id/iv_cover12"
-                        android:layout_width="130dp"
-                        android:layout_height="130dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
                         android:layout_marginStart="1dp"
                         android:layout_marginTop="1dp"
                         android:src="@drawable/planting"
