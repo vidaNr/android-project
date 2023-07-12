@@ -17,7 +17,6 @@ import com.google.android.material.navigation.NavigationBarView;
 public class ProfileActivity extends Activity {
 
     Menu menu;
-
     private BottomNavigationView btnNav;
 
 
@@ -29,12 +28,17 @@ public class ProfileActivity extends Activity {
 
         btnNav = findViewById(R.id.botton_nav);
         btnNav.setSelectedItemId(R.id.ic_profile);
+        checkActionBar();
+
+
+    }
+
+    private void checkActionBar() {
         btnNav.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()) {
                     case R.id.ic_home: {
-
                         Toast.makeText(ProfileActivity.this, "Home", Toast.LENGTH_SHORT).show();
                         startActivity(new Intent(getApplicationContext(), MainActivity.class));
                         finish();
@@ -46,11 +50,9 @@ public class ProfileActivity extends Activity {
                 }
                 return false;
             }
-
         });
-
-
     }
+
 
 }
 

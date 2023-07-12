@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white">
@@ -33,10 +34,10 @@
                 android:layout_marginStart="12dp"
                 android:layout_marginTop="11dp"
                 android:layout_marginEnd="32dp"
-                android:text="This helps us find you more relevant content. We won't show it on your profile."
                 android:fontFamily="@font/roboto_medium"
-                android:textFontWeight="1"
                 android:justificationMode="inter_word"
+                android:text="This helps us find you more relevant content. We won't show it on your profile."
+                android:textFontWeight="1"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
@@ -51,25 +52,19 @@
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
-            <EditText
+            <Spinner
+                android:id="@+id/spn_country"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="4dp"
-                android:layout_marginTop="2dp"
-                android:layout_marginEnd="29dp"
-                android:fontFamily="@font/roboto_medium"
-                android:hint="United States"
-                android:inputType="textEmailAddress"
-                android:padding="12dp"
-                android:textColorHint="@color/secVar"
-                android:textSize="19sp" />
+                android:layout_height="50dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="16dp"
+                android:paddingStart="8dp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="12dp"
-                android:layout_marginTop="22dp"
-                android:layout_marginEnd="32dp"
+                android:layout_marginTop="8dp"
                 android:text="Pick 5 or more topics"
                 android:textColor="@color/black"
                 android:textSize="26sp"
@@ -99,8 +94,8 @@
                         android:layout_height="match_parent"
                         android:layout_marginStart="1dp"
                         android:layout_marginTop="1dp"
-                        android:src="@drawable/drawings"
                         android:scaleType="centerCrop"
+                        android:src="@drawable/drawings"
                         app:riv_corner_radius="10dp" />
 
                     <TextView
@@ -129,10 +124,9 @@
                         android:layout_height="match_parent"
                         android:layout_marginStart="1dp"
                         android:layout_marginTop="1dp"
-                        android:src="@drawable/memes2"
                         android:scaleType="centerCrop"
-                        app:riv_corner_radius="10dp"
-                        />
+                        android:src="@drawable/memes2"
+                        app:riv_corner_radius="10dp" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -258,8 +252,8 @@
                         android:layout_height="match_parent"
                         android:layout_marginStart="1dp"
                         android:layout_marginTop="1dp"
-                        android:src="@drawable/design2"
                         android:scaleType="centerCrop"
+                        android:src="@drawable/design2"
                         app:riv_corner_radius="10dp" />
 
                     <TextView
@@ -426,8 +420,8 @@
                         android:layout_height="match_parent"
                         android:layout_marginStart="1dp"
                         android:layout_marginTop="1dp"
-                        android:src="@drawable/birthdays2"
                         android:scaleType="centerCrop"
+                        android:src="@drawable/birthdays2"
                         app:riv_corner_radius="10dp" />
 
                     <TextView
@@ -480,7 +474,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_marginTop="32dp"
         android:gravity="center"
         android:orientation="vertical">
 
@@ -488,13 +481,11 @@
             android:id="@+id/btn_next"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="15dp"
+            android:layout_margin="6dp"
             android:background="@drawable/rounded_button"
             android:backgroundTint="@color/logo_color"
             android:fontFamily="@font/roboto_medium"
             android:paddingTop="20dp"
-
-
             android:paddingBottom="20dp"
             android:text="next"
             android:textColor="@color/white"

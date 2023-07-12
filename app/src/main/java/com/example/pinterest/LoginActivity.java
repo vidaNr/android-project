@@ -76,7 +76,7 @@ public class LoginActivity extends Activity {
             @Override
             public void run() {
                 startActivity(new Intent(LoginActivity.this, RegisterActivity.class));
-                finish();
+
             }
         };
         handler.postDelayed(runnable, 1000);

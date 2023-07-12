@@ -39,6 +39,7 @@ public class MainActivity extends Activity {
     private RecyclerView rvImages;
     private ImageAdapter imageAdapter;
     private ArrayList<Image> list;
+
     private StaggeredGridLayoutManager manager;
     private int imagePage = 1;
     private int pageSize = 30;
@@ -53,6 +54,15 @@ public class MainActivity extends Activity {
 
         btnNav = findViewById(R.id.botton_nav);
         btnNav.setSelectedItemId(R.id.ic_home);
+        checkActionBar();
+
+        init();
+        fetchImage();
+
+    }
+
+    private void checkActionBar() {
+
         btnNav.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -69,25 +79,17 @@ public class MainActivity extends Activity {
                 }
                 return false;
             }
-
         });
-
-        init();
-        fetchImage();
-
     }
-
     private void init() {
 
         rvImages = findViewById(R.id.rv_images);
         list = new ArrayList<>();
-
-        Log.d("aaa", "this?");
+        imageAdapter = new ImageAdapter(this, list);
         manager = new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL);
         rvImages.setLayoutManager(manager);
         rvImages.setHasFixedSize(true);
         rvImages.setAdapter(imageAdapter);
-
     }
 
     private void fetchImage() {
@@ -95,24 +97,8 @@ public class MainActivity extends Activity {
             @Override
             public void onResponse(Call<List<Image>> call, Response<List<Image>> response) {
                 if ((response.body() != null)) {
-
-                    if (imageAdapter == null) {
-
-                        imageAdapter = new ImageAdapter(MainActivity.this, list) {
-
-                            @Override
-                            public void onEndOfPage() {
-
-                                imagePage++;
-                                Log.d("aaa", "count of pageImage " + imagePage);
-                                fetchImage();
-                            }
-                        };
-                        rvImages.setAdapter(imageAdapter);
-                        list.addAll(response.body());
-                    } else {
-                        imageAdapter.notifyDataSetChanged();
-                    }
+                    list.addAll(response.body());
+                    imageAdapter.notifyDataSetChanged();
                 }
             }
 
