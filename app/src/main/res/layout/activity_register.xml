@@ -109,8 +109,8 @@
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginEnd="8dp"
                         android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
                         app:helperTextTextColor="@color/logo_color">
 
                         <com.google.android.material.textfield.TextInputEditText
@@ -301,6 +301,7 @@
 
 
             <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/iet_show_pass_1"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -355,11 +356,12 @@
                 android:textSize="16sp" />
 
             <TextView
+                android:id="@+id/tv_sign_up"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="4dp"
                 android:fontFamily="@font/roboto_medium"
-                android:text="sign in"
+                android:text="Sign In"
                 android:textColor="@color/black"
                 android:textSize="18sp" />
 
@@ -378,8 +380,7 @@
             android:text="Register Now"
             android:textColor="@color/white"
             android:textSize="18sp"
-            android:textStyle="bold" />
-
+/>
     </LinearLayout>
 
 </RelativeLayout>

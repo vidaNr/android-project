@@ -3,7 +3,9 @@ package com.example.pinterest.Model;
 import com.example.pinterest.Model.UrlModel;
 import com.google.gson.annotations.SerializedName;
 
-public class Image {
+import java.io.Serializable;
+
+public class Image implements Serializable {
 
 
     private UrlModel urls;
@@ -11,88 +13,51 @@ public class Image {
     public Image(UrlModel urls) {
         this.urls = urls;
     }
+    public String getImage() { return imageUrl; }
+
 
     public UrlModel getUrls() {
         return urls;
     }
-
     public void setUrls(UrlModel urls) {
         this.urls = urls;
     }
 
+
     public String getImageUrl() {
         return imageUrl;
     }
+    public void setImageUrl(String image) { this.imageUrl = image; }
 
 
-    private String id;
-    private String title;
-    private String categories;
-    private int width;
-    private int height;
 
-    @SerializedName("regular")
-    private String imageUrl;
+    public String getDescription() { return description; }
 
-
-    public Image(String id, String title, String categories, int width, int height, String image) {
-        this.id = id;
-        this.title = title;
-        this.categories = categories;
-        this.width = width;
-        this.height = height;
-        this.imageUrl = image;
-    }
+    public void setDescription(String description) { this.description = description; }
 
 
     public String getId() {
         return id;
     }
-
     public void setId(String id) {
         this.id = id;
     }
 
-    public String getTitle() {
-        return title;
+
+    public Image(String id, String description, String imageUrl) {
+        this.id = id;
+        this.description = description;
+        this.imageUrl = imageUrl;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
-    }
+    private String id;
 
-    public String getCategories() {
-        return categories;
-    }
+    @SerializedName("alt_description")
+    public String description;
 
-    public void setCategories(String categories) {
-        this.categories = categories;
-    }
+    @SerializedName("regular")
+    public String imageUrl;
 
-    public int getWidth() {
-        return width;
-    }
-
-    public void setWidth(int width) {
-        this.width = width;
-    }
-
-    public int getHeight() {
-        return height;
-    }
-
-    public void setHeight(int height) {
-        this.height = height;
-    }
-
-    public String getImage() {
-        return imageUrl;
-    }
-
-
-    public void setImageUrl(String image) {
-        this.imageUrl = image;
-    }
 
 
 }

@@ -81,11 +81,11 @@ public class MainActivity extends Activity {
             }
         });
     }
+
     private void init() {
 
         rvImages = findViewById(R.id.rv_images);
         list = new ArrayList<>();
-        imageAdapter = new ImageAdapter(this, list);
         manager = new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL);
         rvImages.setLayoutManager(manager);
         rvImages.setHasFixedSize(true);
@@ -98,13 +98,34 @@ public class MainActivity extends Activity {
             public void onResponse(Call<List<Image>> call, Response<List<Image>> response) {
                 if ((response.body() != null)) {
                     list.addAll(response.body());
-                    imageAdapter.notifyDataSetChanged();
+                    if (imageAdapter == null) {
+                        imageAdapter = new ImageAdapter(MainActivity.this, list) {
+
+                            @Override
+                            public void onEndOfPage() {
+                                imagePage++;
+                                fetchImage();
+                            }
+
+                            @Override
+                            public void onImageDetail(Image image) {
+
+                                Intent intent = new Intent(MainActivity.this, DetailActivity.class);
+                                intent.putExtra("image", image);
+
+                                startActivity(intent);
+                            }
+                        };
+                        rvImages.setAdapter(imageAdapter);
+                    } else {
+                        imageAdapter.notifyDataSetChanged();
+                    }
                 }
             }
 
             @Override
             public void onFailure(Call<List<Image>> call, Throwable t) {
-
+                Toast.makeText(MainActivity.this, "Failed to call Api", Toast.LENGTH_SHORT).show();
             }
         });
     }

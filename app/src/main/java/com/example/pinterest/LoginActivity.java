@@ -19,7 +19,7 @@ import com.google.android.material.textfield.TextInputEditText;
 
 public class LoginActivity extends Activity {
 
-    boolean ShowPass = false;
+    public boolean ShowPass = false;
     private TextInputEditText ietEmail;
     private TextInputEditText ietPass;
     Pattern pattern;
@@ -76,11 +76,11 @@ public class LoginActivity extends Activity {
             @Override
             public void run() {
                 startActivity(new Intent(LoginActivity.this, RegisterActivity.class));
+                finish();
 
             }
         };
-        handler.postDelayed(runnable, 1000);
-
+        handler.postDelayed(runnable, 500);
     }
 
     private boolean validation(String email) {
@@ -102,7 +102,6 @@ public class LoginActivity extends Activity {
         SharedPreferences.Editor editor = pref.edit();
         editor.putBoolean("is_login", true);
         editor.apply();
-
         startActivity(new Intent(LoginActivity.this, MainActivity.class));
         finish();
 
